@@ -2,10 +2,10 @@ package jobs_example_boids
 
 import common ".."
 import jobs "../.."
+import "base:runtime"
 import "core:fmt"
 import "core:math/linalg"
 import "core:math/rand"
-import "core:runtime"
 import "core:time"
 import rl "vendor:raylib"
 
