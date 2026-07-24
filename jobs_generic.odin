@@ -10,7 +10,7 @@ import "core:thread"
 _Thread :: ^thread.Thread
 
 _get_num_hardware_threads :: proc() -> int {
-    return os.processor_core_count()
+    return os.get_processor_core_count()
 }
 
 _create_worker_thread :: proc() -> _Thread {
@@ -18,7 +18,7 @@ _create_worker_thread :: proc() -> _Thread {
 }
 
 _current_thread_id :: proc() -> u64 {
-    return u64(os.current_thread_id())
+    return u64(os.get_current_thread_id())
 }
 
 _wait_for_threads_to_finish :: proc(threads: []Thread) {
